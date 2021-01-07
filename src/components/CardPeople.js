@@ -9,14 +9,15 @@ export default function Card(props) {
         <div className="card" style={{width: "25rem"}}>
         <img src="..." className="card-img-top" alt="..." />
         <div className="card-body">
-        <h5 className="card-title">{props.tile}</h5>
-        <p className="card-text">{props.episode_id}</p>
-        <p className="card-text">{props.opening_crawl}</p>
-        <p className="card-text">{props.director}</p>
-        <p className="card-text">{props.producer}</p>
+        <h5 className="card-title">{props.name}</h5>
+        <p className="card-text">{props.height}</p>
+        <p className="card-text">{props.mess}</p>
+        <p className="card-text">{props.skin_color}</p>
+        <p className="card-text">{props.eye_color}</p>
+        <p className="card-text">{props.birth_year}</p>
+        <p className="card-text">{props.gender}</p>
         <p className="card-text">{props.created}</p>
         <p className="card-text">{props.edited}</p>
-        <p className="card-text">{props.release_date}</p>
         <p className="card-text">{props.url}</p>
             </div>
             </div>

@@ -1,9 +1,9 @@
 import React,{useEffect,useState} from 'react'
-import Card from '../components/Card';
+import CardPeople from '../components/CardPeople';
 
-export default function Home() {
+export default function People() {
 
-     const [films , setFilms] = useState([])
+     const [people , setPeople] = useState([])
      const [loader,setLoader] = useState(true);
      const [details,setDetails] =useState('');
 
@@ -18,11 +18,11 @@ export default function Home() {
      }
 
     useEffect(() => {
-        fetch('https://swapi.dev/api/films/')
+        fetch('https://swapi.dev/api/people/')
         .then(response => response.json())
         .then(data => {
             setLoader(false);
-            setFilms(data.results);
+            setPeople(data.results);
         });
     }, [])
 
@@ -31,8 +31,8 @@ export default function Home() {
             <div className="row">
                 <div className="col">
                 {
-                    loader ? 'Loading..' : films.map(film => (
-                        <Card key={film.title} handleClick={handleClick} {...film}/>
+                    loader ? 'Loading..' : people.map(person => (
+                        <CardPeople key={person.title} handleClick={handleClick} {...person}/>
                     ))
                 }
                
