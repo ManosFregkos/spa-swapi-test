@@ -18,6 +18,7 @@ export default function Card(props) {
         <p className="card-text">{props.edited}</p>
         <p className="card-text">{props.release_date}</p>
         <p className="card-text">{props.url}</p>
+        <button onClick={() => props.handleClick(props.url)} className="btn btn-primary">Details</button>
             </div>
             </div>
         </div>

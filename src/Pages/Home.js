@@ -40,7 +40,6 @@ export default function Home() {
             <div className="col">
             {
                 details && Object.entries(details).map(([key,value]) => {
-                    console.log(value)
                     return <div>
                         <p>
                             {key},

@@ -5,7 +5,7 @@ export default function Card(props) {
 
     return (
 
-        <div onClick={() => props.handleClick(props.url)}>
+        <div>
         <div className="card" style={{width: "25rem"}}>
         <img src="..." className="card-img-top" alt="..." />
         <div className="card-body">
@@ -19,6 +19,7 @@ export default function Card(props) {
         <p className="card-text">{props.created}</p>
         <p className="card-text">{props.edited}</p>
         <p className="card-text">{props.url}</p>
+        <button onClick={() => props.handleClick(props.url)} className="btn btn-primary">Details</button>
             </div>
             </div>
         </div>

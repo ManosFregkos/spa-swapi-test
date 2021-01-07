@@ -12,7 +12,6 @@ export default function People() {
         fetch(url)
             .then(response => response.json())
             .then(data => {
-                console.log(data)
                 setDetails(data)
             })
      }
@@ -40,10 +39,9 @@ export default function People() {
             <div className="col">
             {
                 details && Object.entries(details).map(([key,value]) => {
-                    console.log(value)
                     return <div>
                         <p>
-                            {key},
+                            {key}:
                             {value}
                         </p>
                     </div>
